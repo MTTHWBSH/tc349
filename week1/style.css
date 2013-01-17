@@ -1,0 +1,29 @@
+body  {
+	background: #222222;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: #2c2c2c 3px 3px 5px;
+    font-size: 2.0em;
+    color: #131313;
+    padding-top: 50px;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari and Chrome */
+    -o-transition: 2s; /* Opera */    
+}
+
+h1:hover  {
+transform:scale3d(1,1,1);
+-ms-transform:scale3d(1,1,1); /* IE 9 */
+-moz-transform:scale3d(1,1,1); /* Firefox */
+-webkit-transform:scale3d(2,2,2); /* Safari and Chrome */
+-o-transform:scale3d(1,1,1); /* Opera */
+color: #F1A165;
+transition: 2s;
+-moz-transition: 2s; /* Firefox 4 */
+-webkit-transition: 2s; /* Safari and Chrome */
+-o-transition: 2s; /* Opera */
+}
