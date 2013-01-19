@@ -16,11 +16,11 @@ h1 {
 }
 
 h1:hover  {
-transform:scale3d(1,1,1);
--ms-transform:scale3d(1,1,1); /* IE 9 */
--moz-transform:scale3d(1,1,1); /* Firefox */
--webkit-transform:scale3d(2,2,2); /* Safari and Chrome */
--o-transform:scale3d(1,1,1); /* Opera */
+transform:scale3d(1.5,1.5,1.5);
+-ms-transform:scale3d(1.5,1.5,1.5); /* IE 9 */
+-moz-transform:scale3d(1.5,1.5,1.5); /* Firefox */
+-webkit-transform:scale3d(1.5,1.5,1.5); /* Safari and Chrome */
+-o-transform:scale3d(1.5,1.5,1.5); /* Opera */
 color: #F1A165;
 transition: 2s;
 -moz-transition: 2s; /* Firefox 4 */
