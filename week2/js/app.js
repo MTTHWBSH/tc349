@@ -1,4 +1,4 @@
 function hello() {
-alert('navigator.appVersion');
+alert(navigator.appVersion);
 }
 
