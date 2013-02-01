@@ -10,6 +10,8 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,800);
+
 html,
 button,
 input,
@@ -21,6 +23,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*
@@ -90,13 +93,66 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Site Styles
    ========================================================================== */
 
+ul	{
+	margin: 0;
+	padding: 0;
+}
 
+nav	{
+	position: fixed;
+	clear: both;
+}
 
+nav ul li 	{
+	margin: 0px 0px 10px 0px;
+	padding: 10px 0px;
+	width: 200px;
+	background: black;
+}
 
+nav ul li a  {
+	color: white;
+	size: 1.5em;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 10px 20px;
+	transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	width: 250px;
+}
 
+nav ul li:hover  {
+	width: 250px;
+	transition: width 1s;
+	-moz-transition: width 1s;
+	-webkit-transition: width 1s;
+	-o-transition: width 1s;
+}
+
+nav ul li a:hover	{
+	color: #B8D30B;
+}
+
+nav ul li a:hover:after	{	
+	content: ">";
+	padding-right: 15px;
+	float: right;
+}
+
+#main	{
+	width: 760px;
+	margin: 100px 0px 0px 300px;
+	clear: both;
+}
+
+section	{
+	height: 600px;
+}
 
 
 
