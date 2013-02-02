@@ -18,12 +18,15 @@ input,
 select,
 textarea {
     color: #222;
+    background: #F8F8F8;
 }
 
 body {
     font-size: 1em;
     line-height: 1.4;
     font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    overflow: auto;
 }
 
 /*
@@ -96,6 +99,49 @@ textarea {
    Site Styles
    ========================================================================== */
 
+a	{
+	text-decoration: none;
+	color: #B8D30B;
+	opacity: .7;
+	transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	-o-transition: .5s;		
+}
+
+a:hover	{
+	opacity: 1.0;
+}
+   
+.pull-right	{
+	float: right;
+	clear: both;
+}   
+
+header#top	{
+	background: black;
+	border-bottom: 4px solid #B8D30B;
+	height: 50px;
+	min-width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 10;
+}
+
+header#top a	{
+	padding: 12px 20px 0px 0px;
+}
+
+header#top a .icon-twitter:hover, .icon-linkedin:hover, .icon-github-alt:hover	{
+	-webkit-transform: translateY(-1px);
+	-moz-transform: translateY(-1px);
+	-ms-transform: translateY(-1px);
+	-o-transform: translateY(-1px);
+	transform: translateY(-1px);
+}
+
+/* nav styles */
+
 ul	{
 	margin: 0;
 	padding: 0;
@@ -109,12 +155,12 @@ nav	{
 nav ul li 	{
 	margin: 0px 0px 10px 0px;
 	padding: 10px 0px;
-	width: 200px;
+	width: 215px;
 	background: black;
 }
 
 nav ul li a  {
-	color: white;
+	color: #f8f8f8;
 	size: 1.5em;
 	font-weight: 700;
 	text-decoration: none;
@@ -124,6 +170,11 @@ nav ul li a  {
 	-webkit-transition: .5s;
 	-o-transition: .5s;
 	width: 250px;
+	opacity: 1.0;
+}
+
+nav ul li a span	{
+	padding-left: 10px;
 }
 
 nav ul li:hover  {
@@ -144,17 +195,71 @@ nav ul li a:hover:after	{
 	float: right;
 }
 
+/* main content styles  */
+
 #main	{
 	width: 760px;
-	margin: 100px 0px 0px 300px;
+	margin: 150px 0px 0px 300px;
 	clear: both;
 }
 
 section	{
 	height: 600px;
+	padding-top: 120px;
 }
 
+#intro	{
+	padding-top: 18px;
+}
 
+#intro h1	{
+	color: #F8F8F8;
+	font-size: 5.0em;
+	line-height: 100px;
+	margin: 0px 0px 20px 0px;
+}
+
+#intro h1.last	{
+	margin-bottom: 15px;
+}
+
+#intro h1 span	{
+	background: rgba(184, 211, 11, 0.75);
+	padding: 14px 20px 6px 20px;
+}
+
+#intro h3	{
+	margin: 0px 0px 9px 0px;
+}
+
+#intro h3 span.bg	{
+	background: #181818;
+	background: rgba(24, 24, 24, 0.75);
+	color: #F8F8F8;
+	font-size: 1.5em;
+	padding: 5px 10px;
+}
+
+#intro h3 span a	{
+	color: #B8D30B;
+	text-decoration: none;
+	opacity: .7;
+}
+
+#intro h3 span a:hover	{
+	opacity: 1.0;
+}
+
+.gray	{
+	color: rgba(162, 160, 160, 0.75);
+}
+
+/* footer styles */
+
+footer	{
+	text-align: center;
+	padding: 15px 0px 50px 0px;
+}
 
 
 
