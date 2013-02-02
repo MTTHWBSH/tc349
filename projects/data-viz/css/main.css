@@ -118,7 +118,7 @@ a:hover	{
 	clear: both;
 }   
 
-header#top	{
+header	{
 	background: black;
 	border-bottom: 4px solid #B8D30B;
 	height: 50px;
@@ -128,11 +128,11 @@ header#top	{
 	z-index: 10;
 }
 
-header#top a	{
+header a	{
 	padding: 12px 20px 0px 0px;
 }
 
-header#top a .icon-twitter:hover, .icon-linkedin:hover, .icon-github-alt:hover	{
+header a .icon-twitter:hover, .icon-linkedin:hover, .icon-github-alt:hover	{
 	-webkit-transform: translateY(-1px);
 	-moz-transform: translateY(-1px);
 	-ms-transform: translateY(-1px);
@@ -150,6 +150,7 @@ ul	{
 nav	{
 	position: fixed;
 	clear: both;
+	margin-top: 150px;
 }
 
 nav ul li 	{
@@ -199,7 +200,7 @@ nav ul li a:hover:after	{
 
 #main	{
 	width: 760px;
-	margin: 150px 0px 0px 300px;
+	margin: 0px 0px 0px 300px;
 	clear: both;
 }
 
@@ -209,7 +210,7 @@ section	{
 }
 
 #intro	{
-	padding-top: 18px;
+	padding-top: 170px;
 }
 
 #intro h1	{
