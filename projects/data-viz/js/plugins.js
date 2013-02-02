@@ -13,51 +13,75 @@ if (!(window.console && console.log)) {
 
 // Place any jQuery/helper plugins in here.
 
-$(document).ready(function() {
-  function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
-  }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
- 
-  // use the first element that is "scrollable"
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
+(function($) {
+    $.fn.SmoothAnchors = function() {
+
+        function scrollBodyTo(destination, hash) {
+
+            // Change the hash first, then do the scrolling. This retains the standard functionality of the back/forward buttons.
+            var scrollmem = $(document).scrollTop();
+            window.location.hash = hash;
+            $(document).scrollTop(scrollmem);
+            $("html,body").animate({
+                scrollTop: destination
+            }, 400);
+
         }
-      }
-    }
-    return [];
-  }
- 
+
+        if (typeof $().on == "function") {
+            $(document).on('click', 'a[href^="#"]', function() {
+
+                var href = $(this).attr("href");
+
+                if ($(href).length == 0) {
+
+                    var nameSelector = "[name=" + href.replace("#", "") + "]";
+
+                    if (href == "#") {
+                        scrollBodyTo(0, href);
+                    }
+                    else if ($(nameSelector).length != 0) {
+                        scrollBodyTo($(nameSelector).offset().top, href);
+                    }
+                    else {
+                        // fine, we'll just follow the original link. gosh.
+                        window.location = href;
+                    }
+                }
+                else {
+                    scrollBodyTo($(href).offset().top, href);
+                }
+                return false;
+            });
+        }
+        else {
+            $('a[href^="#"]').click(function() {
+                var href = $(this).attr("href");
+
+                if ($(href).length == 0) {
+
+                    var nameSelector = "[name=" + href.replace("#", "") + "]";
+
+                    if (href == "#") {
+                        scrollBodyTo(0, href);
+                    }
+                    else if ($(nameSelector).length != 0) {
+                        scrollBodyTo($(nameSelector).offset().top, href);
+                    }
+                    else {
+                        // fine, we'll just follow the original link. gosh.
+                        window.location = href;
+                    }
+                }
+                else {
+                    scrollBodyTo($(href).offset().top, href);
+                }
+                return false;
+            });
+        }
+    };
+})(jQuery);
+
+$(document).ready(function() {
+    $().SmoothAnchors();
 });
