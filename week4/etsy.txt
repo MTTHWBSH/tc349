@@ -1,0 +1,5 @@
+The first thing I appreciate about Etsy is that it makes shopping for my girlfriend really easy (just kidding, but seriously). I like how quickly they establish their grid-layout. I know grids are stylistically *in* right now, but the way it's done here really aids in establishing information architecture (which has a sensical hierarchy that follows standards).
+
+When I click through to filter content, I'm met with a brand new grid system that utilizes a masonry type layout. Although this is another *in* layout choice, I'm a bit thrown off by the change from the columned grid. An interesting solution that could be less jarring would be using AJAX to load the filtered content without a page reload.
+
+Aside from this, I think this is a really clean, unconfined layout. The light background allows the content to breath lowers the contrast a bit on a pretty rigid grid system. The way the site was laid out I expected it to be responsive, but they may have chosen a mobile vs. desktop approach rather than media-queries. 
