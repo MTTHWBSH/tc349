@@ -1,0 +1,48 @@
+body	{
+	background: #fff;
+	margin: 0;
+	font-family: "Helvetica", sans-serif;
+	line-height: 1.4em;
+}
+
+h1, h2, h3	{
+	margin: 0;
+}
+
+h1	{
+	padding: 15px;
+	background: #aaa;
+	color: #fff;
+}
+
+.container	{
+	max-width: 800px;
+	margin: 0 auto;
+	padding-top: 100px;
+	background: #fff;
+	padding: 50px 15px;
+}
+
+header	{
+	background: #000;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+}
+
+header nav ul li	{
+	display: inline;
+	list-style-type: none;
+	color: #fff;
+}
+
+header nav ul li a	{
+	color: #fff;
+	text-decoration: none;
+	padding: 25px 5px;
+}
+
+header nav ul li a:hover	{
+	background: #fff;
+	color: #000;
+}
