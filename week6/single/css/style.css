@@ -1,0 +1,16 @@
+body	{
+	background: #fff;
+	margin: 0;
+	font-family: "Helvetica", sans-serif;
+	line-height: 1.4em;
+}
+
+.wrap	{
+	margin: 0 10%;
+}
+
+header, footer	{
+	background: #ccc;
+	padding: 25px;
+	text-align: center;
+}
