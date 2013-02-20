@@ -32,7 +32,7 @@
        			<ul>
        				<li><a href="#intro"><i class="icon-home"></i><span>home</span></a></li>
        				<li><a href="#visualization-one"><i class="icon-bar-chart"></i><span>tabular data</span></a></li>
-       				<li><a href="#visualization-two"><i class="icon-bar-chart"></i><span>visualization two</span></a></li>
+       				<li><a href="#visualization-two"><i class="icon-bar-chart"></i><span>bar chart</span></a></li>
        			</ul>
        		</nav>
        		<div id="main">
@@ -76,8 +76,59 @@
 	       			 </script>
        		</section> 
        		<section id="visualization-two">
-       			<h1>VISUALIZATION TWO</h1>
+       			<h1>Bar Chart</h1>
        			<hr />
+       			<h3>bar chart with text labels using the first 14 days from the previous data-set</h3>
+       			<script type ="text/javascript">
+					//Width and height
+					var w = 750;
+					var h = 200;
+					var barPadding = 1;
+					
+					var dataset = [ 5094, 4915, 4803, 5488, 5003, 2482, 2894, 5770, 4950, 8952,
+									5364, 5199, 2598, 2456 ];
+					
+					//Create SVG element
+					var svg = d3.select("#visualization-two")
+								.append("svg")
+								.attr("width", w)
+								.attr("height", h);
+		
+					svg.selectAll("rect")
+					   .data(dataset)
+					   .enter()
+					   .append("rect")
+					   .attr("x", function(d, i) {
+					   		return i * (w / dataset.length);
+					   })
+					   .attr("y", function(d) {
+					   		return h - (d / 50);
+					   })
+					   .attr("width", w / dataset.length - barPadding)
+					   .attr("height", function(d) {
+					   		return d / 50;
+					   })
+					
+					  .attr("fill", "#B8D30B");
+
+					svg.selectAll("text")
+					   .data(dataset)
+					   .enter()
+					   .append("text")
+					   .text(function(d) {
+					   		return d;
+					   })
+					   .attr("text-anchor", "middle")
+					   .attr("x", function(d, i) {
+					   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+					   })
+					   .attr("y", function(d) {
+					   		return h - (d / 50) + 20;
+					   })
+					   .attr("font-family", "sans-serif")
+					   .attr("font-size", "14px")
+					   .attr("fill", "white");
+       			</script>
        		</section> 
        		<hr />
        	<footer>

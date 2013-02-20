@@ -255,6 +255,10 @@ section	{
 	color: rgba(162, 160, 160, 0.75);
 }
 
+section h3	{
+	color: #9e9e9e;
+}
+
 /* footer styles */
 
 footer	{

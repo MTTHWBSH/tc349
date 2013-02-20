@@ -12,3 +12,9 @@ Feb 7 - Feb 12 --
 // Spit analytics data from CSV to table
 // Added light hover state to experiment with transitions
 // Will need to view on server to see CSV ( mtthwbsh.com/data-viz)
+
+Feb 19 - Feb 26
+
+// Used first fourteen days from original data-set and put into array
+// Created bar chart using d3.js
+// Added text labels to appropriate bars from data-set 
