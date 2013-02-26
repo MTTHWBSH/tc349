@@ -31,8 +31,9 @@
        		<nav>
        			<ul>
        				<li><a href="#intro"><i class="icon-home"></i><span>home</span></a></li>
-       				<li><a href="#visualization-one"><i class="icon-bar-chart"></i><span>tabular data</span></a></li>
+       				<li><a href="#visualization-one"><i class="icon-table"></i><span>tabular data</span></a></li>
        				<li><a href="#visualization-two"><i class="icon-bar-chart"></i><span>bar chart</span></a></li>
+       				<li><a href="#visualization-three"><i class="icon-adjust"></i><span>donut chart</span></a></li>
        			</ul>
        		</nav>
        		<div id="main">
@@ -129,7 +130,99 @@
 					   .attr("font-size", "14px")
 					   .attr("fill", "white");
        			</script>
-       		</section> 
+       		</section>
+       		<section id="visualization-three">
+       			<h1>Donut Chart</h1>
+       			<hr />
+       			<h3>Donut chart displaying relationship between browsers used to access statenews.com rounded to the nearest thousandth</h3>
+       			<table style="float: left; position: absolute; left: 450px; margin-top: 150px;">
+       			<tr>
+       			<td style="padding:0 15px; font-weight: bold;">browser</td>
+       			<td style="padding:0; font-weight: bold;">visits</td>
+       			</tr>
+				<tr>
+				<td style="border-left: 24px solid #98abc5; padding:0 10px;"> Safari</td>
+				<td>51,669</td>
+				<tr>
+				<td style="border-left: 24px solid #8A89A6; padding:0 10px;">Chrome</td>
+				<td>40,759</td>
+				</tr>
+				<tr>
+				<td style="border-left: 24px solid #7b6888; padding:0 10px;">Internet Explorer</td>
+				<td>33,244</td>
+				</tr>
+				<tr>
+				<td style="border-left: 24px solid #6b486b; padding:0 10px;">Firefox</td>
+				<td>30,070</td>
+				</tr>
+				<tr>
+				<td style="border-left: 24px solid #a05d56; padding:0 10px;">Safari (in-app)</td>
+				<td>18,325</td>
+				</tr>
+				<tr>
+				<td style="border-left: 24px solid #d0743c; padding:0 10px;">Android Browser</td>
+				<td>9,039</td>
+				</tr>
+				<tr>
+				<td style="border-left: 24px solid #ff8c00; padding:0 10px;">Mozilla Agent</td>
+				<td>1,142</td>
+				</tr>
+				</table>
+				<style>
+				.arc path {
+				  stroke: #f7f7f7;
+				}
+				.arc text {
+				  font-size: 16px;
+				  font-weight: bold;
+				}
+				</style>
+					<script type="text/javascript">
+					var width = 500,
+					    height = 500,
+					    radius = Math.min(width, height) / 2;
+					
+					var color = d3.scale.ordinal()
+					    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+					
+					var arc = d3.svg.arc()
+					    .outerRadius(radius - 10)
+					    .innerRadius(radius - 70);
+					
+					var pie = d3.layout.pie()
+					    .sort(null)
+					    .value(function(d) { return d.browser; });
+					
+					var svg = d3.select("#visualization-three").append("svg")
+					    .attr("width", width)
+					    .attr("height", height)
+					  .append("g")
+					    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+					
+					d3.csv("browser.csv", function(error, data) {
+					
+					  data.forEach(function(d) {
+					    d.browser = +d.visits;
+					  });
+					
+					  var g = svg.selectAll(".arc")
+					      .data(pie(data))
+					    .enter().append("g")
+					      .attr("class", "arc");
+					
+					  g.append("path")
+					      .attr("d", arc)
+					      .style("fill", function(d) { return color(d.data.browser); });
+					
+					  g.append("text")
+					      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+					      .attr("dy", ".35em")
+					      .style("text-anchor", "middle")
+					      .text(function(d) { return d.data.visits; });
+					
+					});
+					</script>
+       		</section>       		 
        		<hr />
        	<footer>
        	<p>© 2013 Matthew Bush - all rights reserved</p>
