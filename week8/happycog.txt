@@ -1,0 +1,7 @@
+I'm really happy you've chosen Happy Cog for this weeks review. I've been a long time follower of Jeffrey Zeldman and more recently a fan of the Happy Cog team in general. I took a lot of inspiration (obviously) for my portfolio site from the, which can be found at mtthwbsh.com.
+
+As far as the interface goes, the biggest thing I'm attracted to is the flat design. There's a great linear hiearchy here that doesn't require moving through space. Use of whitespace and simple horizontal/vertical separators where needed free the content of distraction. This brings me to the _real_ reason I love Happy Cog. Content comes first no matter what. Not only does it come first, but it's great content in brevity. Immediately upon landing you are met with what's important. 
+
+One thing that does surprise me is the navigation scheme after the desktop nav collapses. I really love the way they handled the responsive design, the scaffolding is not distracting at all and you don't lose any sense of where the content is. That said, the fact that it's only available at the bottom is a little bit jarring for me, but this could be another play at putting the most weight on content.
+
+Overall, I'll say it again, I love Happy Cog. 
