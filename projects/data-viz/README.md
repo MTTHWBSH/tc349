@@ -9,3 +9,6 @@ Feb 19 - Feb 26 --
 
 Feb 26 - March 4 --
 // Used data from a months worth statenews.com visits comparing browsers used // Parsed the CSV document I exported to and visualized with a donut chart // Included table and key inside // This should be viewed on the server to parse the CSV data at ( mtthwbsh.com/data-viz/#visualization-three )
+
+March 12 - March 19 --
+// For this week I wanted to get started on something a little more extensive. My past projects have been doable in a few sessions and thus I did a new one each week. // Since this week is dedicated to prototyping I wanted to get some foundation laid out for my first interactive visualization. // I'll be attempting to make an area transition chart for certain time periods of State News data
