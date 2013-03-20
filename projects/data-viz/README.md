@@ -12,3 +12,6 @@ Feb 26 - March 4 --
 
 March 12 - March 19 --
 // For this week I wanted to get started on something a little more extensive. My past projects have been doable in a few sessions and thus I did a new one each week. // Since this week is dedicated to prototyping I wanted to get some foundation laid out for my first interactive visualization. // I'll be attempting to make an area transition chart for certain time periods of State News data
+
+March 19 - March 26 --
+// Did some work diving into the data set and manipulating values. Not sure how this was generated, but it's intense // Did some aesthetic and transition restyling // With the amount of time left in the semester, starting to research potential final visualizations to wrap this project up

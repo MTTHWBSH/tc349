@@ -1,0 +1,5 @@
+Right off the bat: a lot to look at, but liking the subdued color scheme with pops of primary. Grid systems usually help with clutter, but this just seems like organized chaos. I am looking at this on a 23" monitor, so the width of the viewport could have something to do with it.
+
+The masonry layout is definitely "in" right now. I'm using it now by request for a class project (mtthwbsh.com/sta499). I can't help but think this could be more effective with a responsive grid system that shows a little more hierarchy and order.
+
+Aside from these issues, I think the color palette and type are both working really well here. Primary schemes are hard to pull off without looking kitsch, but the variations and lightened hues really bring this together. The type is big and bold, which I love to see, and that does a better job content-wise bringing order to the site.

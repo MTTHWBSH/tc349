@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src="txtlimit.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var myQuote = $('#my_quote');
+			myQuote.hide();
+			$('.button').click(function(){
+			myQuote.show(500);
+			});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisl turpis, laoreet convallis varius quis, hendrerit lobortis odio. In commodo 		est id elit semper eget tincidunt elit luctus. Suspendisse nisi mi, elementum eget malesuada eget, posuere auctor justo. Quisque ultrices, lorem 			vitae ultricies pretium, ante quam rutrum lectus, in bibendum ante augue eu risus. Suspendisse magna metus, dignissim in feugiat sed, fringilla ut 			lectus.</p>
+
+		<p>Ut lobortis egestas massa vitae bibendum. Maecenas convallis augue tempor urna tristique placerat auctor tellus adipiscing. Fusce elementum orci 		neque. Phasellus congue, lorem volutpat euismod ullamcorper, erat odio semper justo, quis hendrerit felis justo pulvinar augue. Nam ac aliquet purus. 		Nullam neque nibh, faucibus pretium cursus eget, tincidunt tincidunt nisi.</p>
+
+		<p><a href="#" class="button">Show Quote</a></p>
+
+		<blockquote id="my_quote"><p>Nulla facilisi. Proin congue enim pharetra leo consectetur non posuere odio suscipit. Ut sapien magna, porta id 				convallis nec, rutrum ac justo. Sed tincidunt tincidunt erat, bibendum sollicitudin purus consectetur id. Sed ipsum purus, auctor nec dictum nec, 			fringilla nec nunc. Sed pretium nisl eget lorem tristique mattis.</p></blockquote>
+		
+		<div id="w">
+		  	<h1>Text Count Limit</h1>
+		  	<h3 class="desc">120 Character Limit</h3>
+		  	
+		  	<p id="counter"><span>0</span> characters</p>
+		  	
+		  	<textarea name="text" id="text" class="txt" tabindex="1"></textarea>
+  		</div>
+		
+	</div><!-- container -->
+	<footer>
+	</footer>
+</body>
+</html>
