@@ -258,6 +258,24 @@ section h3	{
 	color: #9e9e9e;
 }
 
+.arc path {
+  stroke: #f7f7f7;
+}
+.arc text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.area-total {
+	fill: #B8D30B; 
+} 
+
+.line-total { 
+   fill: none;
+   stroke: black;
+   stroke-width: 2px;
+ }
+
 /* footer styles */
 
 footer	{

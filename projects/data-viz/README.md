@@ -15,3 +15,6 @@ March 12 - March 19 --
 
 March 19 - March 26 --
 // Did some work diving into the data set and manipulating values. Not sure how this was generated, but it's intense // Did some aesthetic and transition restyling // With the amount of time left in the semester, starting to research potential final visualizations to wrap this project up
+
+April 9 - End --
+// After reviewing the final requirements, I'm going to spend the remainder of class working on validating the site, improving accessibility, and introducing the responsive component. // I admittedly put most of these things on the back burner to actual get working with d3 and definitely need to give them some attention now
