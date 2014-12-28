@@ -18,7 +18,3 @@ March 19 - March 26 --
 
 April 9 - End --
 // After reviewing the final requirements, I'm going to spend the remainder of class working on validating the site, improving accessibility // I admittedly put most of these things on the back burner to actual get working with d3 and definitely need to give them some attention now
-
-Final site can be viewed at:
-
-mtthwbsh.com/data-viz
